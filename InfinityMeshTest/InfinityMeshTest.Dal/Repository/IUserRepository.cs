@@ -12,7 +12,7 @@ namespace InfinityMeshTest.Dal.Repository
     {
         Task<UserDto> AddUser(User user, CancellationToken cancellationToken = default);
         bool DeleteUser(int userId);
-        Task<List<User>> GetTopTen (CancellationToken cancellationToken = default);
+        Task<List<User>> GetTopFive (CancellationToken cancellationToken = default);
         User GetUserById(int userId);
     }
 }

@@ -26,7 +26,7 @@ namespace InfinityMeshTest.Controllers
         [HttpGet]
         public async Task<List<UserDto>> GetUsers()
         {
-            var Collection = await _UserRepository.GetTopTen();
+            var Collection = await _UserRepository.GetTopFive();
 
             return new List<UserDto>(Collection.Select(user => new UserDto(user)));
         }

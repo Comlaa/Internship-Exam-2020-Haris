@@ -39,8 +39,8 @@ namespace InfinityMeshTest
 
                     });
 
-
             });  // configuration for Cors policy
+
             services.AddControllers();
 
             services.AddMvc().AddFluentValidation(fv => fv.RegisterValidatorsFromAssemblyContaining<UserValidator>());

@@ -9,6 +9,9 @@ namespace InfinityMeshTest.Dal.ViewModel
     {
         public int Id { get; set; }
         public string Name { get; set; }
+        public int Age { get; set; }
+        public List<Blog> Blogs { get; set; }
+        public User ViewProfile { get; set; }
 
         public UserDto() { }
 
@@ -16,6 +19,9 @@ namespace InfinityMeshTest.Dal.ViewModel
         {
             Id = user.Id;
             Name = user.Name;
+            Age = user.Age;
+            Blogs = user.Blogs;
+            ViewProfile = user.ViewProfile;
         }
     }
 }

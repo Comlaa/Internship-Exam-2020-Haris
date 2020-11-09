@@ -33,9 +33,9 @@ namespace InfinityMeshTest.Dal.Repository
             return true;
         }
 
-        public async Task<List<User>> GetTopTen(CancellationToken cancellationToken = default)
+        public async Task<List<User>> GetTopFive(CancellationToken cancellationToken = default)
         {
-            int Number = 10;
+            int Number = 5;
 
             return await Context.Users.Take(Number).ToListAsync(cancellationToken);
         }
