@@ -52,7 +52,7 @@ namespace InfinityMeshTest.Dal.Configuration
                 }
             });
 
-            
+
         }
     }
 }

@@ -33,11 +33,19 @@ namespace InfinityMeshTest.Dal.Repository
             return true;
         }
 
+        public async Task<List<User>> GetSearchedList(string searchString, CancellationToken cancellationToken = default)
+        {
+            int Number = 5;
+
+            return await Context.Users.Take(Number).Where(p => p.Name.ToLower().Contains(searchString.ToLower()) ||
+            p.Email.ToLower().Contains(searchString.ToLower())).ToListAsync(cancellationToken);
+        }
+
         public async Task<List<User>> GetTopFive(CancellationToken cancellationToken = default)
         {
             int Number = 5;
 
-            return await Context.Users.Take(Number).ToListAsync(cancellationToken);
+            return await Context.Users.Take(Number).OrderBy(x => x.Name).ToListAsync(cancellationToken);
         }
 
         public User GetUserById(int userId)

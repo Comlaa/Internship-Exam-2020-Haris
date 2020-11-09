@@ -32,6 +32,14 @@ namespace InfinityMeshTest.Controllers
         }
 
         [HttpGet]
+        public async Task<List<UserDto>> SearchUsers(string searchString) //Get users with search options
+        {
+            var Collection = await _UserRepository.GetSearchedList(searchString);
+
+            return new List<UserDto>(Collection.Select(user => new UserDto(user)));
+        }
+
+        [HttpGet]
         public UserDto GetUserById(int userId)
         {
             return new UserDto(_UserRepository.GetUserById(userId));

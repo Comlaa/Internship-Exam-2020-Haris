@@ -22,7 +22,7 @@ namespace InfinityMeshTest.Dal.Domain
             Name = user.Name;
             Birthdate = user.Birthdate;
             Age = (int.Parse(DateTime.UtcNow.ToString("yyyyMMdd")) - int.Parse(user.Birthdate.ToString("yyyyMMdd"))) / 10000;
-            ViewProfile = "";
+            ViewProfile = "https://localhost:44357/api/user/getUserById?userId="+user.Id;
         }
     }
 }
