@@ -27,17 +27,8 @@ namespace InfinityMeshTest.Dal.Configuration
                     Age = 21,
                     CreatedAt = new DateTime(2020, 11, 9, 10, 42, 00, DateTimeKind.Utc),
                     Email = "haris.mlaco@edu.fit.ba",
+                    ViewProfile = "https://localhost:44357/api/user/getUserById?userId=1",
                 },
-                new User(new User
-                {
-                    Id = 4,
-                    Name="Test User",
-                    Birthdate = new DateTime(2000, 08, 21),
-                    Age = 20,
-                    CreatedAt = new DateTime(2020, 11, 9, 10, 43, 00, DateTimeKind.Utc),
-                    Email = "TestUser@gmail.com",
-                }),
-
 
                 new User
                 {
@@ -47,6 +38,7 @@ namespace InfinityMeshTest.Dal.Configuration
                     Age = 31,
                     CreatedAt = new DateTime(2020, 11, 9, 10, 42, 00, DateTimeKind.Utc),
                     Email = "admirmujkic@infinitymesh.com",
+                    ViewProfile = "https://localhost:44357/api/user/getUserById?userId=2",
                 },
                 new User
                 {
@@ -56,6 +48,7 @@ namespace InfinityMeshTest.Dal.Configuration
                     Age = 21,
                     CreatedAt = new DateTime(2020, 11, 9, 10, 43, 00, DateTimeKind.Utc),
                     Email = "johndoe@doeCompany.com",
+                    ViewProfile = "https://localhost:44357/api/user/getUserById?userId=3",
                 }
             });
 

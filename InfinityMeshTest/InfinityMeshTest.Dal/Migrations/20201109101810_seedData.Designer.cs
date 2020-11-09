@@ -4,14 +4,16 @@ using InfinityMeshTest.Dal;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace InfinityMeshTest.Dal.Migrations
 {
     [DbContext(typeof(IMDbContext))]
-    partial class IMDbContextModelSnapshot : ModelSnapshot
+    [Migration("20201109101810_seedData")]
+    partial class seedData
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -96,7 +98,7 @@ namespace InfinityMeshTest.Dal.Migrations
                             Email = "haris.mlaco@edu.fit.ba",
                             ModifiedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Name = "Haris Mlaco",
-                            ViewProfile = "https://localhost:44357/api/user/getUserById?userId=1"
+                            ViewProfile = "https://localhost:44329/api/user/GetUserById?UserId=1"
                         },
                         new
                         {
@@ -107,7 +109,7 @@ namespace InfinityMeshTest.Dal.Migrations
                             Email = "admirmujkic@infinitymesh.com",
                             ModifiedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Name = "Admir Mujkic",
-                            ViewProfile = "https://localhost:44357/api/user/getUserById?userId=2"
+                            ViewProfile = "https://localhost:44329/api/user/GetUserById?UserId=2"
                         },
                         new
                         {
@@ -118,7 +120,7 @@ namespace InfinityMeshTest.Dal.Migrations
                             Email = "johndoe@doeCompany.com",
                             ModifiedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Name = "John Doe",
-                            ViewProfile = "https://localhost:44357/api/user/getUserById?userId=3"
+                            ViewProfile = "https://localhost:44329/api/user/GetUserById?UserId=3"
                         });
                 });
 
