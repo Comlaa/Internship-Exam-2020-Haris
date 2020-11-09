@@ -12,6 +12,7 @@ namespace InfinityMeshTest.Dal.Repository
     {
         Task<BlogDto> AddBlog(Blog blog, CancellationToken cancellationToken = default);
         Task<List<Blog>> GetTopTen(CancellationToken cancellationToken = default);
+        Task<List<Blog>> GetUserBlogs(int userId, CancellationToken cancellationToken = default);
         Blog GetBlogById(int blogId);
     }
 }

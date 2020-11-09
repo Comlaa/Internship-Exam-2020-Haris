@@ -30,6 +30,14 @@ namespace InfinityMeshTest.Controllers
         }
 
         [HttpGet]
+        public async Task<List<UserBlogDto>> GetUserBlogs(int userId)
+        {
+            var Collection = await _BlogRepository.GetUserBlogs(userId);
+
+            return new List<UserBlogDto>(Collection.Select(blog => new UserBlogDto(blog)));
+        }
+
+        [HttpGet]
         public BlogDto GetBlogById(int blogId)
         {
             return new BlogDto(_BlogRepository.GetBlogById(blogId));
@@ -48,7 +56,7 @@ namespace InfinityMeshTest.Controllers
                 Title = blog.Title,
                 Content = blog.Content,
                 Summary = blog.Summary,
-                PublishedDateTime = blog.PublishedDateTime,
+                PublishedDateTime = DateTime.Now,
                 UserId = blog.UserId,
             };
 

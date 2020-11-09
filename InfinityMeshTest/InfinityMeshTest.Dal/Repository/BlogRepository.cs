@@ -37,5 +37,11 @@ namespace InfinityMeshTest.Dal.Repository
             return await Context.Blogs.Take(Number).OrderBy(x => x.PublishedDateTime).ToListAsync(cancellationToken);
         }
 
+        public async Task<List<Blog>> GetUserBlogs(int userId, CancellationToken cancellationToken = default)
+        {
+            int Number = 10;
+
+            return await Context.Blogs.Take(Number).Where(x => x.UserId == userId).OrderBy(x => x.PublishedDateTime).ToListAsync(cancellationToken);
+        }
     }
 }
