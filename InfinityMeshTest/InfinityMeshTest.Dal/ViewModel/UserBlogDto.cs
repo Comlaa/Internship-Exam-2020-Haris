@@ -19,7 +19,7 @@ namespace InfinityMeshTest.Dal.ViewModel
         {
             Title = blog.Title;
             Summary = blog.Summary;
-            PublishedDateTime = blog.PublishedDateTime.ToString("hh: mm, dd MMM yyyy");
+            PublishedDateTime = blog.PublishedDateTime.ToString("hh:mm, dd MMM yyyy");
         }
     }
 }

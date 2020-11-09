@@ -56,7 +56,7 @@ namespace InfinityMeshTest.Controllers
                 Title = blog.Title,
                 Content = blog.Content,
                 Summary = blog.Summary,
-                PublishedDateTime = DateTime.Now,
+                PublishedDateTime = DateTime.Parse(blog.PublishedDateTime.ToString()),
                 UserId = blog.UserId,
             };
 
