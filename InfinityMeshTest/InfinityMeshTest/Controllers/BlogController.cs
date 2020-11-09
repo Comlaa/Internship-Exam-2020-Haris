@@ -46,10 +46,19 @@ namespace InfinityMeshTest.Controllers
         [HttpPost]
         public async Task<BlogDto> AddBlog([FromBody] AddBlogDto blog)
         {
-            if (!ModelState.IsValid)
+            try
             {
-                Debug.WriteLine("Validation exception!");
+                if (!ModelState.IsValid)
+                {
+                    Debug.WriteLine("Validation exception!");
+                }
             }
+            catch (Exception ex)
+            {
+
+                Debug.WriteLine("Exception error:", ex.Message);
+            }
+          
 
             var BlogDomain = new Blog
             {
