@@ -48,11 +48,6 @@ namespace InfinityMeshTest.Controllers
         [HttpPost]
         public async Task<UserDto> AddUser([FromBody] UserDto user)
         {
-            if (!ModelState.IsValid)
-            {
-                Debug.WriteLine("Validation exception!");
-            }
-
             var UserDomain = new User
             {
                 Name = user.Name,

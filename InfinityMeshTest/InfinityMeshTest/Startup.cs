@@ -43,12 +43,15 @@ namespace InfinityMeshTest
 
             services.AddControllers();
 
-            services.AddMvc().AddFluentValidation(fv => fv.RegisterValidatorsFromAssemblyContaining<UserValidator>());
+            services.AddMvc().AddFluentValidation(fv => fv.RegisterValidatorsFromAssemblyContaining<BlogValidation>());
 
             var connectionString = Configuration.GetConnectionString("IMDataBase");
             services.AddDbContext<IMDbContext>(builder => builder.UseSqlServer(connectionString));
 
             services.AddScoped<IUserRepository, UserRepository>();
+
+            services.AddScoped<IBlogRepository, BlogRepository>();
+
         }
 
 
